@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds Shop - Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Reset some default styles */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #007bff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+section {
+    text-align: center;
+    margin: 20px;
+}
+
+.bird-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bird-card:hover {
+    transform: scale(1.05);
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 0;
+    }
+
+    nav {
+        padding: 5px 0;
+    }
+
+    .bird-card {
+        width: 100%;
+    }
+}
+  </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="birds.html">Birds Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="videos.html">Bird Videos</a>
+        <a href="location.html">Location</a>
+    </nav>
+
+    <header>
+        <h1>Welcome to jaffer birds</h1>
+    </header>
+
+    <section>
+        <h2>Explore our selection of beautiful birds!</h2>
+        <p>Visit our <a href="birds.html">Birds Shop</a> or learn more <a href="about.html">About Us</a>.</p>
+    </section>
+<div>
+    <form class="login-form" id="loginForm">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+  </div>
+    <script>
+        function order(birdType) {
+            alert(Order placed for ${birdType});
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'your_username' && password === 'your_password') {
+                alert('Login successful!');
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
+
+<!-- Existing code... -->
+
+<section>
+    <div class="bird-card">
+        <h2>lovebirds</h2>
+        <p>Colorful and talkative companion.</p>
+        <button onclick="order('lovebirds')">Order Now</button>
+    </div>
+
+    <div class="bird-card">
+        <h2>conure</h2>
+        <p>Beautiful singing bird.</p>
+        <button onclick="order('Conure')">Order Now</button>
+    </div>
+
+    <div class="bird-card">
+        <h2>Finch</h2>
+        <p>Small, friendly bird with a melodious song.</p>
+        <button onclick="order('Finch')">Order Now</button>
+    </div>
+
+    <div class="bird-card">
+        <h2>Cockatiel</h2>
+        <p>Charming and sociable bird with a distinctive crest.</p>
+        <button onclick="order('Cockatiel')">Order Now</button>
+    </div>
+
+    <!-- Add more bird cards as needed -->
+
+</section>
+
+<!-- Existing code... -->
+
+<!-- Existing code... -->
+
+<section>
+    <div class="bird-card" id="parrot">
+        <h2>Parrot</h2>
+        <p>Colorful and talkative companion.</p>
+        <button onclick="order('Parrot')">Order Now</button>
+        <button onclick="addToCart('Parrot')">Add to Cart</button>
+    </div>
+
+    <div class="bird-card" id="canary">
+        <h2>Canary</h2>
+        <p>Beautiful singing bird.</p>
+        <button onclick="order('Canary')">Order Now</button>
+        <button onclick="addToCart('Canary')">Add to Cart</button>
+    </div>
+
+    <div class="bird-card" id="finch">
+        <h2>Finch</h2>
+        <p>Small, friendly bird with a melodious song.</p>
+        <button onclick="order('Finch')">Order Now</button>
+        <button onclick="addToCart('Finch')">Add to Cart</button>
+    </div>
+
+    <div class="bird-card" id="cockatiel">
+        <h2>Cockatiel</h2>
+        <p>Charming and sociable bird with a distinctive crest.</p>
+        <button onclick="order('Cockatiel')">Order Now</button>
+        <button onclick="addToCart('Cockatiel')">Add to Cart</button>
+    </div>
+
+    <!-- Add more bird cards as needed -->
+
+</section>
+
+<script>
+    const cart = [];
+
+    function addToCart(birdType) {
+        const bird = document.getElementById(birdType);
+        const birdDetails = {
+            type: birdType,
+            quantity: 1, // You can adjust the quantity as needed
+        };
+        cart.push(birdDetails);
+        alert(${birdType} added to cart!);
+    }
+</script>
+
+<!-- Existing code... -->
+
+
+<!-- Existing code... -->
+
+<section>
+    <div class="bird-card" id="parrot">
+        <h2>Parrot</h2>
+        <img src="C:\Users\syedm\Downloads/download" alt="Parrot Image">
+        <p>Colorful and talkative companion.</p>
+        <button onclick="order('Parrot')">Order Now</button>
+        <button onclick="addToCart('Parrot')">Add to Cart</button>
+    </div>
+
+    <div class="bird-card" id="canary">
+        <h2>Canary</h2>
+        <img src="canary.jpg" alt="Canary Image">
+        <p>Beautiful singing bird.</p>
+        <button onclick="order('Canary')">Order Now</button>
+        <button onclick="addToCart('Canary')">Add to Cart</button>
+    </div>
+
+    <div class="bird-card" id="finch">
+        <h2>Finch</h2>
+        <img src="finch.jpg" alt="Finch Image">
+        <p>Small, friendly bird with a melodious song.</p>
+        <button onclick="order('Finch')">Order Now</button>
+        <button onclick="addToCart('Finch')">Add to Cart</button>
+    </div>
+
+    <div class="bird-card" id="cockatiel">
+        <h2>Cockatiel</h2>
+        <img src="cockatiel.jpg" alt="Cockatiel Image">
+        <p>Charming and sociable bird with a distinctive crest.</p>
+        <button onclick="order('Cockatiel')">Order Now</button>
+        <button onclick="addToCart('Cockatiel')">Add to Cart</button>
+    </div>
+
+    <!-- Add more bird cards as needed -->
+
+</section>
+
+<!-- Existing code... -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds Shop - Bird Videos</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bird Videos</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="birds.html">Birds Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="videos.html">Bird Videos</a> <!-- New link to the Bird Videos page -->
+    </nav>
+
+    <section>
+        <h2>Enjoy these beautiful bird videos</h2>
+
+        <div class="video-container">
+            <!-- Replace the YouTube video IDs with your own video IDs -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+            <!-- Add more if needed -->
+        </div>
+    </section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds Shop - Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Birds Shop</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="birds.html">Birds Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="videos.html">Bird Videos</a>
+        <a href="location.html">Location</a>
+    </nav>
+
+    <section>
+        <h2>Have questions or feedback? Reach out to us!</h2>
+
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Email: <a href="mailto:info@birdsshop.com">jafferbirds1444@gmail.com</a></p>
+            <p>Phone: 9844821437</p>
+        </div>
+
+        <div class="contact-form">
+            <h3>Contact Form</h3>
+            <form action="#" method="post" id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add your form submission logic here
+            alert('Form submitted! (This is a placeholder)');
+        });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds Shop - Location</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Our Location</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="birds.html">Birds Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="videos.html">Bird Videos</a>
+        <a href="location.html">Location</a> <!-- New link to the Location page -->
+    </nav>
+
+    <section>
+        <h2>Visit us at Birds Shop</h2>
+        <p>We are located at:</p>
+
+        <address>
+            jaffer birds<br>
+            HAL, LB shastrnagar<br>
+            Country: india<br>
+            Zip Code: 560017
+        </address>
+
+        <div id="map">
+            <!-- You can embed a map or provide a link to a map service -->
+            <!-- Replace the placeholder with your map implementation -->
+            <p>Map goes here</p>
+        </div>
+    </section>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds Shop - About Us</title>
+    <style>
+        /* Styles can be added based on your design preferences */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Birds Shop</h1>
+    </header>
+
+    <section>
+        <p>Welcome to Birds Shop! We are dedicated to providing a wide variety of beautiful and healthy birds for bird enthusiasts. Our goal is to create a vibrant community of bird lovers and ensure a delightful experience for our customers. we provide all types of exoctic birds a
+      we encourage birds breeder </p>
+        <p>Feel free to explore our <a href="birds.html">Birds Shop</a> and discover the perfect feathered companion for you!</p>
+    </section>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds Shop - Profile</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Your Profile</h1>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="birds.html">Birds Shop</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="videos.html">Bird Videos</a>
+            <a href="location.html">Location</a>
+            <a href="profile.html" id="profileLink" style="display: none;">Profile</a>
+        </nav>
+
+        <section>
+            <h2>MY Profile Information</h2>
+          <h2> SYED JAFFER </h2>
+          <h2> banglore </h2>
+          <h2> birds lover <h2>
+            <!-- Display user's profile information here -->
+        </section>
+    </div>
+</body>
+</html>
